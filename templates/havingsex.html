@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<center>
+	<form action="confirmation" method="POST">
+		<h3>What dorm/house room are you using?</h3>
+
+		<select name="dorm" id="dorm" onchange="getDorm();">>
+			<option value="burtonhall">Burton Hall</option>
+			<option value="cassathall">Cassat Hall</option>
+			<option value="davishall">Davis Hall</option>
+			<option value="evanshall">Evans Hall</option>
+			<option value="facultyclub">Faculty Club</option>
+			<option value="goodhuehall">Goodhue Hall</option>
+			<option value="jameshall">James Hall</option>
+			<option value="myershall">Myers Hall</option>
+			<option value="musserhall">Musser Hall</option>
+			<option value="noursehall">Nourse Hall</option>
+			<option value="severancehall">Severance Hall</option>
+			<option value="watsonhall">Watson Hall</option>
+			<option value="allenhouse">Allen House</option>
+			<option value="brookshouse">Brooks House</option>
+			<option value="claderhouse">Clader House</option>
+			<option value="collierhouse">Collier House</option>
+			<option value="colwellhouse">Colwell House</option>
+			<option value="dowhouse">Dow House</option>
+			<option value="eugsterhouse">Eugster House</option>
+			<option value="hillhouse">Hill House</option>
+			<option value="hunthouse">Hunt House</option>
+			<option value="owenshouse">Owens House</option>
+			<option value="nasonhouse">Nason House</option>
+			<option value="pagehousewest">Page House West</option>
+			<option value="parishhouse">Parish House</option>		
+			<option value="prenticehouse">Prentice House</option>
+	 		<option value="ricehouse">Rice House</option>
+	 		<option value="scotthouse">Scott House</option>
+	 		<option value="wilsonhouse">Wilson House</option>
+		</select>
+		<input type="text" id="RoomNumber" name="RoomNumber" maxlength="3" />
+
+		<h3>Where is your unused room to lend out?</h3>
+			<p>
+				<select name="dorm" id="dorm" onchange="getDorm();">>
+					<option value="burtonhall">Burton Hall</option>
+					<option value="cassathall">Cassat Hall</option>
+					<option value="davishall">Davis Hall</option>
+					<option value="evanshall">Evans Hall</option>
+					<option value="facultyclub">Faculty Club</option>
+					<option value="goodhuehall">Goodhue Hall</option>
+					<option value="jameshall">James Hall</option>
+					<option value="myershall">Myers Hall</option>
+					<option value="musserhall">Musser Hall</option>
+					<option value="noursehall">Nourse Hall</option>
+					<option value="severancehall">Severance Hall</option>
+					<option value="watsonhall">Watson Hall</option>
+					<option value="allenhouse">Allen House</option>
+					<option value="brookshouse">Brooks House</option>
+					<option value="claderhouse">Clader House</option>
+					<option value="collierhouse">Collier House</option>
+					<option value="colwellhouse">Colwell House</option>
+					<option value="dowhouse">Dow House</option>
+					<option value="eugsterhouse">Eugster House</option>
+					<option value="hillhouse">Hill House</option>
+					<option value="hunthouse">Hunt House</option>
+					<option value="owenshouse">Owens House</option>
+					<option value="nasonhouse">Nason House</option>
+					<option value="pagehousewest">Page House West</option>
+					<option value="parishhouse">Parish House</option>		
+					<option value="prenticehouse">Prentice House</option>
+			 		<option value="ricehouse">Rice House</option>
+			 		<option value="scotthouse">Scott House</option>
+			 		<option value="wilsonhouse">Wilson House</option>
+				</select>
+				<input type="text" id="RoomNumber" name="RoomNumber" maxlength="3" />
+				<br><br><br><button type="submit" class="button">Here we go!</button></p>
+
+		<script type="text/javascript">
+		function getDorm() {
+			var index = document.getElementById('dorm').selectedIndex;
+			alert("Dorm="+document.getElementById('dorm').value);
+			alert("number="+document.getElementById('dorm').options[index].text);
+		}
+		</script>
+
+
+
+	</form>
+</center>
+	
+
+	<br><br><h3> <a href="{{ url_for('home') }}">Back to Main</a></h3>
+{% endblock %}
