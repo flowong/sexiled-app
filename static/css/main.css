@@ -6,7 +6,7 @@ body {
 }
  
 /*
- * Create dark grey header with a white logo
+ * Create purple header with a yellow-white logo
  */
   
 header {
@@ -15,23 +15,26 @@ header {
   width: 100%;
   opacity: .9;
   margin-bottom: 10px;
+
 }
  
 header h1.logo {
-  margin: 0;
+  margin: 0px 20px;
   font-size: 2em;
   color: #F2EFAA;
   font-family: "Shadows Into Light";
   float: left;
+  transition: color .5s;
 }
 
 header h1.logo:hover {
-  color: #F2EFAA;
+  color: yellow;
   text-decoration: none;
 }
 
 header h1.subtitle {
   margin: 0;
+  padding: 20px 0px 0px 20px;
   font-size: 1em;
   color: #969191;
   font-family: "Shadows Into Light";
